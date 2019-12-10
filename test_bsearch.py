@@ -17,8 +17,8 @@ def test_even():
 
 
 def test_odd():
-    assert bsearch.bsearch([1, 2, 3, 4, 5, 6, 7], 2) == 1
+    assert bsearch.bsearch([1, 2, 3, 4, 5, 6, 7], 3) == 2
 
 
 def test_dup():
-    assert bsearch.bsearch([1, 2, 2, 2, 2, 2, 3, 3], 2) == 3
+    assert bsearch.bsearch([1, 2, 2, 2, 2, 2, 3, 3], 2) == 4
