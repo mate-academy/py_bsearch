@@ -1,20 +1,19 @@
 """binary search recursive algorithm"""
-from typing import List
+from typing import Iterable
 
 
-def bsearch(list_: List[int], value: int) -> int:
+def bsearch(list_: Iterable[int], value: int) -> int:
     """
     :param list_: sorted list of integers
     :param value: value to search
     :return: call of binary search function
     :raise ValueError if list is empty
     """
-    start = 0
-    end = len(list_) - 1
+    start, end = 0, len(list(list_)) - 1
     if not list_:
         raise ValueError
 
-    def search(arr: List[int], key: int, start_: int, end_: int) -> int:
+    def search(arr, key: int, start_: int, end_: int) -> int:
         """
         :param arr: list of integers
         :param key: value to search
